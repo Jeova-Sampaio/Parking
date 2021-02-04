@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  plaque: MyString
+  mark: MyString
+  model: MyString
+  color: MyString
+  person: one
+
+two:
+  plaque: MyString
+  mark: MyString
+  model: MyString
+  color: MyString
+  person: two
