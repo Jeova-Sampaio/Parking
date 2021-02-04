@@ -12,7 +12,8 @@ class VehiclesController < ApplicationController
 
   # GET /vehicles/new
   def new
-    @vehicle = Vehicle.new
+    @person = Person.find params[:person_id]
+    @vehicle = Vehicle.new(person_id: @person.id)
   end
 
   # GET /vehicles/1/edit
@@ -23,15 +24,14 @@ class VehiclesController < ApplicationController
   def create
     @vehicle = Vehicle.new(vehicle_params)
 
-    respond_to do |format|
       if @vehicle.save
-        format.html { redirect_to @vehicle, notice: "Vehicle was successfully created." }
-        format.json { render :show, status: :created, location: @vehicle }
+        redirect_to @vehicle, notice: "Vehicle was successfully created."
+        
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @vehicle.errors, status: :unprocessable_entity }
+        render :new, status: :unprocessable_entity
+        
       end
-    end
+    
   end
 
   # PATCH/PUT /vehicles/1 or /vehicles/1.json

@@ -10,7 +10,9 @@
       </ul>
     </div>
   <% end %>
-
+  
+  <%= form.hidden_field :person_id %>
+  
   <div class="field">
     <%= form.label :plaque %>
     <%= form.text_field :plaque %>
@@ -29,11 +31,6 @@
   <div class="field">
     <%= form.label :color %>
     <%= form.text_field :color %>
-  </div>
-
-  <div class="field">
-    <%= form.label :person_id %>
-    <%= form.text_field :person_id %>
   </div>
 
   <div class="actions">

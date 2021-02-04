@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<p>Este carro pertence a: <%= @vehicle.person.name %></p>
+
 <p>
   <strong>Plaque:</strong>
   <%= @vehicle.plaque %>
@@ -20,10 +22,6 @@
   <%= @vehicle.color %>
 </p>
 
-<p>
-  <strong>Person:</strong>
-  <%= @vehicle.person %>
-</p>
 
 <%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
 <%= link_to 'Back', vehicles_path %>
