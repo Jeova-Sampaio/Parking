@@ -21,7 +21,7 @@
         <td><%= vehicle.mark %></td>
         <td><%= vehicle.model %></td>
         <td><%= vehicle.color %></td>
-        <td><%= vehicle.person %></td>
+        <td><%= vehicle.person.name %></td>
         <td><%= link_to 'Show', vehicle %></td>
         <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
         <td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
